@@ -1,6 +1,6 @@
 #Less Theme Support
 
-Using Less.js when developing a theme can both enhance the code and speed development. However, setting up Less in a theme everytime (not to mention updating Less for all the themes) can make the time saved futile.
+Using [Less](http://lesscss.org) when developing a theme can both enhance the code and speed development. However, setting up Less in a theme every time (not to mention updating Less for all the themes) can make the time saved futile.
 
 This plugin solves that issue.
 
@@ -10,7 +10,7 @@ This plugin can be installed and activated the [WordPress way](https://codex.wor
 
 ##Usage
 
-Enabling Less is similar to adding theme support for post-formats or editor styles, as it uses `add_theme_support()`.
+Enabling Less Theme Support is similar to adding theme support for post-formats or editor styles, as it uses `add_theme_support()`.
 
 Here is an example:
 
