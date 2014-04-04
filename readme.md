@@ -15,9 +15,9 @@ Enabling Less is similar to adding theme support for post-formats or editor styl
 Here is an example:
 
 ```php
-	add_theme_support( 'less', array(
-		'enable' => true
-	) );
+add_theme_support( 'less', array(
+	'enable' => true
+) );
 ```
 
 Once enabled you can add a `style.less` file in your theme root and start editing.
@@ -44,15 +44,15 @@ Enables usage of a minified stylesheet (`style.min.css`) on the front end for al
 
 ##Examples
 ```php
-	add_theme_support( 'less', array(
-		'enable'  => true,
-		'develop' => true,
-		'watch'  => true
-	) );
+add_theme_support( 'less', array(
+	'enable'  => true,
+	'develop' => true,
+	'watch'  => true
+) );
 ```
 
 ```php
-	add_theme_support( 'less', array(
-		'minify' => true
-	) );
+add_theme_support( 'less', array(
+	'minify' => true
+) );
 ```
