@@ -86,6 +86,9 @@ class Less_Theme_Support {
 			return;
 		}
 
+		// Load localization domain
+		load_plugin_textdomain( 'less-theme-support', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 		/**
 		 * Since we've made it this far, we assume the theme
 		 * support Less. Now we can get that theme support.
@@ -108,7 +111,7 @@ class Less_Theme_Support {
 	 * @since 1.0.0
 	*/
 	public function notice() {
-		$notice = __( 'Less Theme Support requires WordPress version 3.4 of above.', 'less-theme-support' );
+		$notice = __( 'Less Theme Support requires WordPress version 3.4 or above.', 'less-theme-support' );
 
 		echo '<div class="error"><p>' . $notice . '</p></div>';
 	}
