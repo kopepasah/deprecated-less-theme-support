@@ -100,7 +100,17 @@ class Less_Theme_Support {
 		*/
 		$this->prefix = $this->get_prefix();
 
-		add_filter( 'style_loader_tag',   array( $this, 'filter_style_loader_tag' ) );
+		/**
+		 * If a prefix is not set by now, something is wrong.
+		 * Let's bail.
+		 *
+		 * NOTE Let's add an admin notice for when this occurs.
+		*/
+		if ( empty( $this->prefix ) ) {
+			return;
+		}
+
+		add_filter( 'style_loader_tag',   array( $this, 'filter_style_loader_tag' ), 10, 2 );
 		add_filter( 'stylesheet_uri',     array( $this, 'filter_stylesheet_uri' ), 10, 2 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ), 100 );
 	}
@@ -194,8 +204,8 @@ class Less_Theme_Support {
 	 * @param $tag The stylesheet tag.
 	 * @return string The stylesheet tag.
 	*/
-	function filter_style_loader_tag( $tag ) {
-		if ( preg_match( '/' . $this->prefix . '-css/', $tag ) ) {
+	function filter_style_loader_tag( $tag, $handle ) {
+		if ( $this->prefix == $handle ) {
 			if ( current_user_can( 'edit_themes' ) && $this->support['enable'] ) {
 				$tag = preg_replace( '/rel=\'stylesheet\'/', 'rel=\'stylesheet/less\'', $tag );
 			}
