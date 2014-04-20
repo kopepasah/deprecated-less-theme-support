@@ -1,8 +1,12 @@
 #Less Theme Support
 
-Using [Less](http://lesscss.org) when developing a theme can both enhance the code and speed development. However, setting up Less in a theme every time (not to mention updating Less for all the themes) can make the time saved futile.
+Using [Less](http://lesscss.org) when developing a theme can both enhance the code and speed development. However, setting up Less in a every theme (not to mention updating Less for each theme) can make any saved time saved.
 
-This plugin solves that issue.
+This plugin solves that issue by setting up Less for the theme.
+
+## Less Version
+
+The current version installed in this plugin is __1.7.0__. I try to keep up with the latest, but if I fall behind just send me a pull request.
 
 ##Installation
 
@@ -10,17 +14,14 @@ This plugin can be installed and activated the [WordPress way](https://codex.wor
 
 ##Usage
 
-Enabling Less Theme Support is similar to adding theme support for post-formats or editor styles, as it uses `add_theme_support()`.
-
-Here is an example:
+1. Add `style.less` at the root of the theme.
+2. Add the following to the `after_setup_theme` hook.
 
 ```php
 add_theme_support( 'less', array(
 	'enable' => true
 ) );
 ```
-
-Once enabled you can add a `style.less` file in your theme root and start editing.
 
 ###Options
 
