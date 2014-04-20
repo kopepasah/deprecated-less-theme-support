@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Less Theme Support
-Version: 1.0.0
+Version: 1.0.2
 Plugin URI: https://github.com/kopepasah/less-theme-support
 Description: Adds support for using Less in a theme, primarily for development.
 Author: Justin Kopepasah

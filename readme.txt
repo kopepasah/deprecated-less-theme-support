@@ -4,7 +4,7 @@ Tags: less, lessjs, lesscss, theme
 Donate link: http://kopepasah.com/donate/
 Requires at least: 3.4
 Tested up to: 3.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,9 @@ For more information on advanced usage, other options or to join development, vi
 None yet. Ask Away!
 
 == Changelog ==
+= 1.0.2 =
+* Added correct tag.
+
 = 1.0.1 =
 * Fixed prefix bug.
 * Added more efficient style_loader_tag filter.
