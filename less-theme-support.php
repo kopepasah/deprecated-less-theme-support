@@ -116,7 +116,7 @@ class Less_Theme_Support {
 	}
 
 	/**
-	 * Notice when SyntacHighlighter is not active.
+	 * Notice when WordPress version compare fails.
 	 *
 	 * @since 1.0.0
 	*/
@@ -173,8 +173,8 @@ class Less_Theme_Support {
 	 * stylesheet, a minified stylesheet or simply
 	 * change nothing.
 	 *
-	 * Note, the less support is only enabled if a
-	 * current user has the capability to edit themes.
+	 * Note: Theme support for Less is only enabled when the
+	 *       current user has the capability to edit themes.
 	 *
 	 * @since 1.0.0
 	 * @param string $stylesheet_uri     Stylesheet URI for the current theme/child theme.
@@ -197,11 +197,12 @@ class Less_Theme_Support {
 	 * the text domain is the same as the handle used
 	 * to enqueue the stylesheet.
 	 *
-	 * Note, the less support is only enabled if a
-	 * current user has the capability to edit themes.
+	 * Note: The this tag is only replaced when the current
+	 *       user has the capability to edit themes.
 	 *
 	 * @since 1.0.0
 	 * @param $tag The stylesheet tag.
+	 * @param $handle The handle of the stylesheet.
 	 * @return string The stylesheet tag.
 	*/
 	function filter_style_loader_tag( $tag, $handle ) {
@@ -215,11 +216,11 @@ class Less_Theme_Support {
 	}
 
 	/**
-	 * Enqueue's the LESS script, as well as, the script
-	 * develop and watch modes.
+	 * Enqueue's the LESS script, as well as, the scripts
+	 * for develop and watch modes.
 	 *
-	 * Note, the less support is only enabled if a
-	 * current user has the capability to edit themes.
+	 * Note: The these scripts are only enqueued when the
+	 *       current user has the capability to edit themes.
 	 *
 	 * @since 1.0.0
 	*/
@@ -233,7 +234,7 @@ class Less_Theme_Support {
 
 			wp_enqueue_script( 'less', plugins_url( 'js/less.min.js', __FILE__ ), array(), '1.7.0' );
 
-			// If development mode is enabled, watch for changes.
+			// If watch mode is enabled, watch for changes.
 			if ( $this->support['watch'] ) {
 				wp_enqueue_script( 'less-watch', plugins_url( 'js/less-watch.js', __FILE__ ) );
 			}
