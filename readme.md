@@ -1,4 +1,8 @@
-#Less Theme Support
+# (Deprecated)
+
+This repository is no longer maintained and will be removed on 2017-01-01.
+
+# Less Theme Support
 
 Using [Less](http://lesscss.org) when developing a theme can both enhance the code and speed development. However, setting up Less in a every theme (not to mention updating Less for each theme) can make any saved time saved.
 
